@@ -10,10 +10,26 @@
 <body>
     <h1>Forms Demo</h1>
     <form action="/search/">
-        <input type="text" placeholder="username">
-        <input type="password" placeholder="enter password">
-        <input type="color">
-        <input type="number" placeholder="enter a number">
+        <p>
+            <label for="username">Enter a username:</label>
+            <input id="username" type="text" placeholder="username">
+        </p>
+        
+        <p>
+            <label for="password">Enter a password:</label>
+            <input id="password" type="password" placeholder="enter password">
+        </p>
+        
+        <p>
+            <label for="color">Pick a color:</label>
+            <input type="color" id="color">
+        </p>
+        
+        <p>
+            <label for="number">Pick a number:</label>
+            <input type="number" placeholder="enter a number" id="number">
+        </p>
+        
     </form>
 </body>
 </html>
