@@ -67,6 +67,38 @@
         <input type="text" name="search_query">
         <button>Search YouTube</button>        
     </form>
+    <hr>
+
+    <!-- Playing with more input types -->
+    <h2>More Inputs!</h2>
+
+    <form action="/birds">
+        <input type="checkbox" name="agree_tos" id="agree">
+        <label for="agree">I agree to everything</label>
+
+        <p>
+            <label for="xs">Xtra Small:</label>
+            <input type="radio" name="size" id="xs" value="xs">
+
+            <label for="s">Small:</label>
+            <input type="radio" name="size" id="s" value="s">
+
+            <label for="m">Medium:</label>
+            <input type="radio" name="size" id="m" value="m">
+        </p>
+
+        <p> 
+            <label for="meal">Please Select an Entree</label>
+            <select name="meal" id="meal">
+                <!-- can enter another option with empty value with 'select an option' -->
+                <!-- can put selected if want preselected option -->
+                <option value="fish">Fish</option>
+                <option value="veg">Vegetarian</option>
+                <option value="steak">Steak</option>
+            </select>
+        </p>
+        <button type="submit">Submit</button>
+    </form>
 
 
 </body>
