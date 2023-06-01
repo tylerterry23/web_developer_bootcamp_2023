@@ -9,7 +9,13 @@
 
 <body>
     <h1>Forms Demo</h1>
-    <form action="/search/">
+
+    <button>Outside the form!</button>
+
+    <form action="/search">
+
+        <button type="button">PLEASE DO NOT SUBMIT THE FORM</button>
+
         <p>
             <label for="username">Enter a username:</label>
             <input id="username" type="text" placeholder="username">
@@ -29,6 +35,9 @@
             <label for="number">Pick a number:</label>
             <input type="number" placeholder="enter a number" id="number">
         </p>
+
+        <button type="submit">Submit</button>
+        <input type="submit" value="Click Me!">
         
     </form>
 </body>
