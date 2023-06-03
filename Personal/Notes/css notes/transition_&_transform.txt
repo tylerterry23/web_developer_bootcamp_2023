@@ -1,0 +1,31 @@
+Transitions
+CSS Transitions allow modification of element attributes like color, size, and position over time, including adjustments to speed, timing function, delay, direction, repetition, and order.
+
+Property Name | Duration | Timing Function | Delay .... | Iteration Count | Direction | Fill Mode | Play State
+
+
+Transform
+CSS Transform allows modification of the coordinate space of the CSS visual formatting model. This can be used for rotating, scaling, moving, skewing, and distorting elements.
+
+Property Name | Translate | Scale | Rotate | Skew | Matrix | Perspective
+
+There is a lot of Transform options some of the most common are:
+- translateX
+- translateY
+- translateZ
+- scale
+- scaleX
+- scaleY
+- scaleZ
+- rotate
+- rotateX
+- rotateY
+- rotateZ
+- skew
+- skewX
+- skewY
+- matrix
+- perspective
+- origin (transform-origin) - sets the origin of transformation for an element
+
+everything applies to not only the elements but the entire section if desired
