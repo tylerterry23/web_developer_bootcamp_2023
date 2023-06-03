@@ -1,0 +1,13 @@
+Bootstrap Basics Practice
+I've given you some starter markup in index.html.  Bootstrap is already included! Please add in the appropriate bootstrap classes according to these instructions:
+
+Make the section a bootstrap container
+
+Give the h1 white text, a dark background, and center-aligned text
+
+Make the div an alert ('warning' color).  Set the role attribute to alert, for accessibility purposes!
+
+Make the first button a green bootstrap button
+
+Make the second button a red bootstrap button
+
