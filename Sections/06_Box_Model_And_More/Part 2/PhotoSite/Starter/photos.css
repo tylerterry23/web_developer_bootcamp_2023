@@ -1,7 +1,12 @@
 img {
     width: 30%;
+    /* 30 + 30 + 30 so 10% left */
+    /* each image has left and right there is three images so 6 sides */
+    /* take the 10% left and divide amongst the 6 sides */
     /* margin: 1.66666666%; */
     margin: calc(10% / 6);
+    transition: box-shadow .35s ease-in-out;
+    cursor: pointer;
 }
 
 nav {
@@ -12,7 +17,23 @@ nav {
     width: 30%;
     margin-left: calc(10% / 6);
     padding: 1.2em 0;
-
 }
 
-/* 30 + 30 + 30 so 10% left */
+img.column1:hover {
+    transform: translateY(-10px);
+    box-shadow: -1em 1em 0.5em -.2em grey;
+}
+
+img.column2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0em 1em 0.5em -.2em grey;
+}
+
+img.column3:hover {
+    transform: translateY(-10px);
+    box-shadow: 1em 1em 0.5em -.2em grey;
+}
+
+img:active {
+    opacity: 0.5;
+}
