@@ -1,0 +1,60 @@
+
++ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- +
+When using css there are two unit categories
++ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- +
+
+category 1: Absolute Units
+    these are units that are not relative to anything and are always the same size no matter what.
+
+    Examples:
+    - PX, PT, CM, IN, MM...
+    Out of these for the most part PX is the most used by far and is the default unit for most css properties.
+
+category 2: Relative Units 
+    these are units that are relative to something and change size depending on the context.
+
+    Examples:
+    - EM, REM, VW, VH, %...
+    EM is the most common here but unlike absolute all of them are used quite a bit.
+
+
++ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- +
+# Percentages - Always Relative to Some Other Value
++ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- +
+
+So if there is a outer div that is 40px and a inner div that is 20px and the inner div has a width of 50% then the inner div will be 10px wide.
+
+This is because the inner div is 50% of the outer div.
+
+
++ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- +
+# EM - Relative to the Font Size of the Parent Element  
++ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- +
+
+so if the parent element has a font size of 16px and the child element has a font size of 2em then the child element will have a font size of 32px.
+
+if parent font size 10px
+1.5em = 15px
+2em = 20px
+3em = 30px
+...
+10em = 100px
+...
+xem = x * 10px
+
+This could be used in a button so that each section the button is put on its scales in shape and corresponds to the section font size.
+
+
++ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- +
+# REM - Relative to the Font Size of the Root Element
++ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- +
+
+One of the issues with EMs is that they can stack and get out of control. So if you have a div that has a font size of 2em and then a child element that has a font size of 2em then the child element will have a font size of 4em.
+
+This is because the child element is 2em of the parent element which is 2em of the root element.
+
+This is when REMs become useful. REMs are always relative to the root element so if the root element has a font size of 16px and the child element has a font size of 2rem then the child element will have a font size of 32px.
+
+REMs is based on the root elements font size so if the root element has a font size of 10px then 1rem = 10px.
+
+* the r in rem stands for root. *

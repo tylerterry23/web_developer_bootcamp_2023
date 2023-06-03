@@ -1,0 +1,14 @@
+Display property
+
+The display property specifies the type of box used for an HTML element.
+
+In HTML, the default display property value is taken from the HTML specifications or from the browser/user default style sheet. The default value in XML is inline, including SVG elements.
+
+The display property is often used together with the value none to hide an element.
+
+The display property:
+
+none - The element is completely removed.
+block - The element is displayed as a block-level element (like paragraphs and headers).
+inline - The element is displayed as an inline-level element (like span).
+inline-block - The element is displayed as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values.

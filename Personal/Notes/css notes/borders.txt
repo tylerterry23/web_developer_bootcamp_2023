@@ -1,0 +1,37 @@
+
+# general
+When putting borders on anything and trying to add multiple styles they go in a certain order
+Order is as follows:
+1. Border width
+2. Border style
+3. Border color
+4. Border radius
+
+so instead of them doing it individually you can do it all in one line
+
+Individually:
+border-width: 2px;
+border-style: solid;
+border-color: red;
+border-radius: 5px;
+
+All in one line:
+border: 2px solid red 50%;
+
+
+
+# Padding
+Padding is the space between the content and the border
+There are 4 options for padding
+
+1. Apply to all sides
+padding: 10px;
+
+2. Apply to top and bottom, left and right
+padding: 10px 20px;
+
+3. Apply to top, left and right, bottom
+padding: 10px 20px 30px;
+
+4. Apply to top, right, bottom, left
+padding: 10px 20px 30px 40px;
