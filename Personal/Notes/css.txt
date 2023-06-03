@@ -1,0 +1,260 @@
++ --------------------------------------------------------------------------------------------------------------- +
+# Adjacent Selection - Select only the paragraphs that are immediately after a h1 element
++ --------------------------------------------------------------------------------------------------------------- +
+## Example HTML:
+    <h1>This is an example</h1>
+    <p>
+        Since this paragraph is immediately after the h1 element, it will be selected.
+    </p>
+
+    <p>
+        This paragraph is not immediately after the h1 element, so it will not be selected.
+    </p>
+
+## Example CSS:
+    h1 + p {
+        color: red;
+    }
+
+
+
++ --------------------------------------------------------------------------------------------------------------- +
+# Direct Child Selection - Select only the paragraphs that are a direct child of a div element
++ --------------------------------------------------------------------------------------------------------------- +
+## Example HTML:
+    <div>
+        <p>
+            This paragraph is a direct child of the div element, so it will be selected.
+        </p>
+    </div>
+
+    <p>
+        This paragraph is not a direct child of the div element, so it will not be selected.
+    </p>
+
+
+## Example CSS:
+    div > p {
+        color: red;
+    }
+
++ --------------------------------------------------------------------------------------------------------------- +
+# Attribute Selection - Select only the paragraphs that have a title attribute
+https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
++ --------------------------------------------------------------------------------------------------------------- +
+## Example HTML:
+    <p title="example">
+        This paragraph has a title attribute, so it will be selected.
+    </p>
+
+    <p>
+        This paragraph does not have a title attribute, so it will not be selected.
+    </p>
+
+## Example CSS:
+    p[title="example"] {
+        color: red;
+    }
+
+## More From MDN
+    /* <a> elements with a title attribute */
+    a[title] {
+    color: purple;
+    }
+
+    /* <a> elements with an href matching "https://example.org" */
+    a[href="https://example.org"]
+    {
+    color: green;
+    }
+
+    /* <a> elements with an href containing "example" */
+    a[href*="example"] {
+    font-size: 2em;
+    }
+
+    /* <a> elements with an href ending ".org" */
+    a[href$=".org"] {
+    font-style: italic;
+    }
+
+    /* <a> elements whose class attribute contains the word "logo" */
+    a[class~="logo"] {
+    padding: 2px;
+    }
+
+
++ --------------------------------------------------------------------------------------------------------------- +
+# Pseudo-Classes - Keyword added to selectors that specifies a special state of the selected element(s)
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
++ --------------------------------------------------------------------------------------------------------------- +
+
+
+# Hover - Selects an element when you mouse over it
+Example HTML:
+    <button>+Vote</button>
+
+Example CSS:
+    button:hover {
+        background-color: red;
+        color: white;
+    }
+
+Can also be used with elements or classes
+Example CSS:
+
+    .post button:hover {
+        background-color: red;
+        color: white;
+    }
+
+
+# Active - Selects an element when you click on it
+Example HTML:
+    <button>+Vote</button>
+
+Example CSS:
+    button:active {
+        background-color: red;
+        color: white;
+    }
+
+Can also be used with elements or classes
+Example CSS:
+
+    .post button:active {
+        background-color: red;
+        color: white;
+    }
+
+
+# Every other or nth element - Selects every other element
+Example HTML:
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+
+Example CSS:
+    li:nth-child(odd) {
+        background-color: red;
+    }
+
+Can also be used with elements or classes
+Example CSS:
+
+    .post li:nth-child(odd) {
+        background-color: red;
+    }
+
+
+
+
++ --------------------------------------------------------------------------------------------------------------- +
+# Pseudo-Elements - Keyword added to selectors that specifies a special part of the selected element(s)
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
++ --------------------------------------------------------------------------------------------------------------- +
+First Letter - Selects the first letter of an element
+Example HTML:
+    <p>
+        This is an example paragraph.
+    </p>
+
+Example CSS:
+    p::first-letter {
+        font-size: 2em;
+    }
+
+Can also be used with elements or classes
+Example CSS:
+
+    .post p::first-letter {
+        font-size: 2em;
+    }
+
+First Line - Selects the first line of an element
+Example HTML:
+    <p>
+        This is an example paragraph line one
+        This is an example paragraph line two
+    </p>
+
+Example CSS:
+    p::first-line {
+        font-size: 2em;
+    }
+
+Selection - Selects the selected text of an element
+Example HTML:
+    <p>
+        This is an example paragraph.
+    </p>
+
+Example CSS:
+    p::selection {
+        background-color: red;
+    }
+
+
++ --------------------------------------------------------------------------------------------------------------- +
+# Specificity - How the browser decides which CSS property values are the most relevant to an element and, therefore,
+# will be applied.
+https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
++ --------------------------------------------------------------------------------------------------------------- +
+
+The more specif a selector is, the higher the specificity. The higher the specificity, the more likely it is to be applied.
+
+Inline Styles - 1000
+ID - 100
+Class - 10
+Element - 1
+
+Inline   ID       Class    Element
+___1___  ___0___  ___0___  ___0___
+
+So something with 2 id and 1 class would be 210
+
+more examples:
+1 id, 1 class, 1 element = 111
+2 id, 1 class, 1 element = 211
+1 id, 2 class, 1 element = 121
+1 id, 1 class, 2 element = 112
+
+
+Inline styles will always override everything else they are the most specific. They are generally not recommended
+!important is also not recommended, but it is more specific than inline styles
+
+
++ --------------------------------------------------------------------------------------------------------------- +
+# Inheritance - The process by which certain properties are passed from a parent element to its children
+https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance
++ --------------------------------------------------------------------------------------------------------------- +
+
+Inheritance is a key feature that allows developers to write less code and make it easier to maintain.
+
+Example HTML:
+    <div>
+        <p>
+            This is an example paragraph.
+        </p>
+    </div>
+
+Example CSS:
+    div {
+        color: red;
+    }
+
+The paragraph will also be red because it inherits the color from the div element.
+
+Somethings do not inherit, like background-color, but you can use the inherit keyword to force it to inherit.
+
+Example CSS:
+    div {
+        color: red;
+        background-color: inherit;
+    }
+
+The paragraph will now inherit the background-color from the div element.

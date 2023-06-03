@@ -1,0 +1,8 @@
+/* WRITE YOUR CODE IN HERE!!!!  */
+div .square:nth-child(even) {
+    background-color: black;
+}
+
+div .square:nth-child(odd) {
+    background-color: red;
+}

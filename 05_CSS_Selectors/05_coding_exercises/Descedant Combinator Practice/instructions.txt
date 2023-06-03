@@ -1,0 +1,19 @@
+Descendant Combinator Practice
+Using what we just learned about the descendent combinator, write styles in app.css to accomplish the following:
+
+(don't change any markup in index.html, please!)
+
+Give only the links in the header :
+
+font size of 30px
+
+color of teal
+
+Give only the links inside the paragraph with the id 'dislikes':
+
+bolded
+
+color of red
+
+Your result should look like this:
+
