@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tik-Tak-Toe Extreme</title>
+    <title>Tic-Tak-Toe Extreme</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">  -->
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
-    <h1 id="title">Welcome to Tik-Tak-Toe Extreme</h1>
+    <h1 id="title">Welcome to Tic-Tak-Toe Extreme</h1>
     <main class="container"> 
         <div class="row gx-5 bg-transparent">
 
@@ -33,19 +33,20 @@
                 <div id="gameBoard" class="row px-5 py-3 text-white text-center fs-1">
 
                     <!-- Cells: First row -->
-                    <div class="cell col-4 py-3">  <span><img class="icon" src="imgs/new_o.png" alt="O"></span> </div>
-                    <div class="cell col-4 py-3">  <span><img class="icon" src="imgs/new_x.png" alt="X"></span> </div>
-                    <div class="cell col-4 py-3">  <span><img class="icon" src="imgs/new_o.png" alt="O"></span> </div>
+                    <div id="cell_1" class="cell col-4 py-3"> </div>
+                    <div id="cell_2" class="cell col-4 py-3"> </div>
+                    <div id="cell_3" class="cell col-4 py-3"> </div>
 
                     <!-- Cells: Second row -->
-                    <div class="cell col-4 py-3">  <span><img class="icon" src="imgs/new_o.png" alt="O"></span> </div>
-                    <div class="cell col-4 py-3">  <span><img class="icon" src="imgs/new_x.png" alt="O"></span></div>
-                    <div class="cell col-4 py-3">  <span><img class="icon" src="imgs/new_o.png" alt="O"></span></div>
+                    <div id="cell_4" class="cell col-4 py-3"> </div>
+                    <div id="cell_5" class="cell col-4 py-3"> </div>
+                    <div id="cell_6" class="cell col-4 py-3"> </div>
 
                     <!-- Cells: Third row -->
-                    <div class="cell col-4 py-3">  <span><img class="icon" src="imgs/new_o.png" alt="O"></span> </div>
-                    <div class="cell col-4 py-3">  <span><img class="icon" src="imgs/new_x.png" alt="O"></span> </div>
-                    <div class="cell col-4 py-3">  <span><img class="icon" src="imgs/new_o.png" alt="O"></span> </div>
+                    <div id="cell_7" class="cell col-4 py-3"> </div>
+                    <div id="cell_8" class="cell col-4 py-3"> </div>
+                    <div id="cell_9" class="cell col-4 py-3"> </div>
+
                 </div>
             </section>
 
@@ -55,8 +56,26 @@
                 <p>Score: <span id="player2-score">0</span></p>
             </section>
 
+            
+
         </div>
-    </main>
+    </main> 
+
+
+    <script src="app.js"></script>
+    <script>
+
+        const cells = document.querySelectorAll('.cell');
+        const gameBoard = document.querySelector('#gameBoard');
+        const player1Score = document.querySelector('#player1-score');
+        const player2Score = document.querySelector('#player2-score');
+        const result = document.querySelector('#result');
+        const title = document.querySelector('#title');
+
+        let player1Turn = true;
+        let player1ScoreCount = 0;
+
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
