@@ -1,0 +1,140 @@
+body{
+    background-image: linear-gradient(to bottom right, #bbd0ff, #b8c0ff, #c8b6ff, #e7c6ff, #ffd6ff);
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+header, h1 {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 0em;
+}
+
+.title {
+    font-size: 4em;
+}
+
+/* Calculator Body */
+#calc-body {
+    background-color: rgba(0, 0, 0, 0.519);
+    border: solid rgb(0, 0, 0);
+    box-shadow: 10px 10px 25px rgb(29, 29, 29);
+    align-items: center;
+    justify-content: center;
+    max-width: 20em;
+    margin: auto;
+    margin-top: 3em;
+    border-radius: 10px;
+}
+
+/* Display Screen */
+#display {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 1em;
+    background-color: rgb(211, 211, 211);
+    min-height: 3em;
+    border-radius: 10px;
+}
+
+#display p {
+    margin: 0;
+    padding-right: 0.3em;
+    font-size: 2em;
+}
+
+#interaction {
+    margin-bottom: 15px;
+}
+
+#interaction .symbol {
+    background-color: orange;
+}
+
+#interaction .symbol:hover {
+    background-color: rgb(255, 183, 50);
+}
+
+#interaction .symbol:active {
+    background-color: rgb(250, 207, 126);
+}
+
+#interaction a:hover {
+    background-color: rgb(225, 225, 225);
+    transition: .25s;
+}
+
+#interaction a:active {
+    background-color: rgb(238, 237, 237);
+    transition: .25s;
+}
+
+/* Rows */
+.row {
+    display: flex;
+    flex-direction: row;
+    margin: .2em 1em .2em 1em;
+}
+
+.row a {
+    background-color: lightgray;
+    border-radius: 5px;
+    min-width: 65px;
+    min-height: 65px;
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+    color: black;
+
+    /* Add flexbox layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.span-two {
+    width: 48%;
+}
+
+@media screen and (max-width: 400px) {
+    header, h1 {
+        font-size: 0.8em;
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 0em;
+    }
+
+}
+
+
+/* TODO */
+@media screen and (max-width: 300px) {
+    header, h1 {
+        font-size: 0.8em;
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 0em;
+    }
+
+    #calc-body {
+        max-width: 100%;
+        margin-top: 2em;
+    }
+
+    #interaction .row {
+        flex-wrap: wrap;
+    }
+
+    #interaction .row a {
+        min-width: 50%;
+        min-height: 50px;
+        font-size: 1.2em;
+    }
+
+    #interaction .span-two {
+        width: 100%;
+        min-width: unset;
+    }
+}
