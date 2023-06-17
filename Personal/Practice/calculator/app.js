@@ -3,8 +3,7 @@
 // Constructors for the calculator
 function Calculator() {
     this.display = document.getElementById('displayText');
-    this.displayValue = this.display.innerHTML;
-    this.displayValue = 0;
+    this.displayValue = parseFloat(this.display.innerHTML);
     this.firstValue = 0;
     this.secondValue = 0;
     this.operator = "";
@@ -100,10 +99,11 @@ document.getElementById('equals').addEventListener('click', function() {
     entry("=");
 });
 
+calculator.display.innerHTML = 0;
+
 // Function to handle button clicks
 function entry(value) {
 
-    console.log(value);
     // Get Operator
     if (value === "+" || value === "-" || value === "*" || value === "/") {
         calculator.operator = value;
@@ -119,18 +119,24 @@ function entry(value) {
     // Get Answer
     else if (value === "=") {
         calculator.secondValue = calculator.displayValue;
+        console.log(`Second Value: ${calculator.secondValue}`)
+
         switch (calculator.operator) {
             case "+":
                 calculator.add();
+                calculator.displayValue = calculator.result;
                 break;
             case "-":
                 calculator.subtract();
+                calculator.displayValue = calculator.result;
                 break;
             case "*":
                 calculator.multiply();
+                calculator.displayValue = calculator.result;
                 break;
             case "/":
                 calculator.divide();
+                calculator.displayValue = calculator.result;
                 break;
         }
     } 
@@ -142,11 +148,16 @@ function entry(value) {
     
     // Change display
     else {
+
+        // if the display is 0 or the operator is not empty then add the value to the display 
         if (calculator.display.innerHTML === "0") {
             calculator.display.innerHTML = value;
         } else {
             calculator.display.innerHTML += value;
         }
+
+        // Set the display value to the current display
+        calculator.displayValue = parseFloat(calculator.display.innerHTML);
     }
 }
 
