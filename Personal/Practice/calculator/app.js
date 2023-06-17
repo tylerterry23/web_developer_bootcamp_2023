@@ -115,6 +115,13 @@ function entry(value) {
         calculator.display.innerHTML = 0;
         console.log(`Display: ${calculator.display.innerHTML}`)
     }
+
+    // change sign
+    else if (value === "+/-") {
+        calculator.displayValue = calculator.displayValue * -1;
+        calculator.display.innerHTML = calculator.displayValue;
+    }
+    
     
     // Get Answer
     else if (value === "=") {
